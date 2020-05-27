@@ -15,22 +15,18 @@ let image = document.querySelector('.image');
 let prev = 0;
 
 function getNextElement(arr) {
-    const getRandom = () => Math.floor(Math.random() * Math.floor(phrases.length));
-    let curr = getRandom();
-    console.log("initial: ", curr, prev)
+    let curr = Math.floor(Math.random() * Math.floor(phrases.length));
     let el;
     if (curr !== prev) { // making sure elements do not repeat
         el = arr[curr];
         prev = curr;
         return el;
     }
-    console.log("match!", curr, prev);
     if (prev === 0) {
         prev++;   
     } else {
         prev--;
     }
-    console.log(prev);
     el = arr[prev];
     return el;
 }
