@@ -1,10 +1,10 @@
 let phrases = [
-    { text: "Decide it's finally time to do a workout", link: 'images/sport.png' },
-    { text: "Figure out the real meaning of rap songs", link: 'images/rap.png' },
-    { text: "Check old photos on social", link: 'images/social.png' },
-    { text: "Arrange your books by color", link: 'images/sport.png' },
-    { text: "Listen to sad songs and relive the mistakes of your youth", link: 'images/rap.png' },
-    { text: "Watch some Jimmy Kimmel", link: 'images/social.png' },
+    { text: "decide it's finally time to do a workout", link: 'images/sport.png' },
+    { text: "figure out the real meaning of rap songs", link: 'images/rap.png' },
+    { text: "check old photos on social", link: 'images/social.png' },
+    { text: "arrange your books by color", link: 'images/sport.png' },
+    { text: "listen to sad songs and relive the mistakes of your youth", link: 'images/rap.png' },
+    { text: "watch some Jimmy Kimmel", link: 'images/social.png' },
 ];
 
 let button = document.querySelector('.button');
