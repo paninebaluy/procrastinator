@@ -17,16 +17,22 @@ let prev = 0;
 function getNextElement(arr) {
     const getRandom = () => Math.floor(Math.random() * Math.floor(phrases.length));
     let curr = getRandom();
+    console.log("initial: ", curr, prev)
+    let el;
     if (curr !== prev) { // making sure elements do not repeat
+        el = arr[curr];
         prev = curr;
-        return arr[curr];
+        return el;
     }
-    if (prev === arr.length -1) {
+    console.log("match!", curr, prev);
+    if (prev === 0) {
+        prev++;   
+    } else {
         prev--;
-        return arr[prev];
     }
-    prev++;
-    return arr[prev];
+    console.log(prev);
+    el = arr[prev];
+    return el;
 }
 
 function newSuggestion () {
