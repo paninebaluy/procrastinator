@@ -44,7 +44,7 @@ function newSuggestion () {
     changeSmoothly(image, randomElement.link);
 }
 
-window.addEventListener('load', newSuggestion);
+document.addEventListener('DOMContentLoaded', newSuggestion);
 button.addEventListener('click', newSuggestion);
 
 // for (let i = 0; i <= 2; i += 1) {
