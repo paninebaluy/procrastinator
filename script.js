@@ -12,15 +12,24 @@ let advice = document.querySelector('.advice');
 let phrase = document.querySelector('.phrase');
 let image = document.querySelector('.image');
 
-let current = 0;
+let prev = 0;
 
 function getNextElement(arr) {
-    const el = arr[current++];
-    if (current === arr.length) current = 0;
-    return el;
+    const getRandom = () => Math.floor(Math.random() * Math.floor(phrases.length));
+    let curr = getRandom();
+    if (curr !== prev) { // making sure elements do not repeat
+        prev = curr;
+        return arr[curr];
+    }
+    if (prev === arr.length -1) {
+        prev--;
+        return arr[prev];
+    }
+    prev++;
+    return arr[prev];
 }
 
-button.addEventListener('click', function () {
+function newSuggestion () {
     let randomElement = getNextElement(phrases);
 
     if (randomElement.text.length > 24) {
@@ -31,7 +40,10 @@ button.addEventListener('click', function () {
 
     changeSmoothly(phrase, randomElement.text);
     changeSmoothly(image, randomElement.link);
-});
+}
+
+window.addEventListener('load', newSuggestion);
+button.addEventListener('click', newSuggestion);
 
 // for (let i = 0; i <= 2; i += 1) {
 //     changeSmoothly(phrase, phrases[i].text);
