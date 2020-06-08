@@ -17,6 +17,8 @@ html {
 }
 
 body {
+    display: flex;
+    flex-flow: column nowrap;
     background-color: #323131;
     color: white;
     max-width: 540px;
@@ -63,6 +65,7 @@ body {
 }
 
 .advice {
+    flex: 1;
     font-size: 42px;
     font-weight: bold;
     line-height: 1.1;
