@@ -30,42 +30,26 @@ let advice = document.querySelector('.advice');
 let phrase = document.querySelector('.phrase');
 let image = document.querySelector('.image');
 
-let prev = 0;
+let current = Math.floor(Math.random() * Math.floor(phrases.length)); // random first element
 
-function getNextElement(arr) {
-    let curr = Math.floor(Math.random() * Math.floor(phrases.length));
-    let el;
-    if (curr !== prev) { // making sure elements do not repeat
-        el = arr[curr];
-        prev = curr;
-        return el;
-    }
-    if (prev === 0) {
-        prev++;   
-    } else {
-        prev--;
-    }
-    el = arr[prev];
+function getNextElement(arr) { // sequential next elements
+    const el = arr[current++];
+    if (current === arr.length) current = 0;
     return el;
 }
 
 function newSuggestion () {
-    let randomElement = getNextElement(phrases);
+    const nextElement = getNextElement(phrases);
 
-    if (randomElement.text.length > 24) {
+    if (nextElement.text.length > 24) {
         advice.style.fontSize = '42px';
     } else {
         advice.style.fontSize = '50px';
     }
 
-    changeSmoothly(phrase, randomElement.text);
-    changeSmoothly(image, randomElement.link);
+    changeSmoothly(phrase, nextElement.text);
+    changeSmoothly(image, nextElement.link);
 }
 
 document.addEventListener('DOMContentLoaded', newSuggestion);
 button.addEventListener('click', newSuggestion);
-
-// for (let i = 0; i <= 2; i += 1) {
-//     changeSmoothly(phrase, phrases[i].text);
-//     changeSmoothly(image, phrases[i].link);
-// }
