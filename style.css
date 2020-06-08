@@ -39,6 +39,7 @@ body {
 
 
 .logo {
+    flex-shrink: 0;
     font-weight: bold;
     font-size: 24px;
 }
@@ -54,6 +55,10 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: opacity 0.2s;
+}
+
+@media screen and (max-width: 360px) {
+    .button {font-size: 10px;}
 }
 
 .button:hover {
