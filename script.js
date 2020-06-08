@@ -21,7 +21,6 @@ let phrases = [
     { text: "read the latest discussions on your favorite subreddits", link: 'images/rap.png' },
     { text: "send a friend a funny gif", link: 'images/social.png' },
 ];
-];
 
 let button = document.querySelector('.button');
 let advice = document.querySelector('.advice');
