@@ -56,9 +56,9 @@ body {
     transition: opacity 0.2s;
 }
 
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
     .button {font-size: 10px;}
-}
+} */
 
 .button:hover {
     opacity: 0.5;
