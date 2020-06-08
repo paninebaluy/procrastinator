@@ -20,6 +20,9 @@ let phrases = [
     { text: "think of smart responses to an argument you had last year", link: 'images/sport.png' },
     { text: "read the latest discussions on your favorite subreddits", link: 'images/rap.png' },
     { text: "send a friend a funny gif", link: 'images/social.png' },
+    { text: "calculate your future salary at Facebook", link: 'images/sport.png' },
+    { text: "watch your plants grow", link: 'images/rap.png' },
+    { text: "read about the benefits of meditation", link: 'images/social.png' },
 ];
 
 let button = document.querySelector('.button');
