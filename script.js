@@ -47,8 +47,8 @@ function newSuggestion () {
         advice.style.fontSize = '50px';
     }
 
-    changeSmoothly(phrase, nextElement.text);
-    changeSmoothly(image, nextElement.link);
+    smoothly(phrase, 'textContent', nextElement.text);
+    smoothly(image, 'src', nextElement.link);
 }
 
 document.addEventListener('DOMContentLoaded', newSuggestion);
